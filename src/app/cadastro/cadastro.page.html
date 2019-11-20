@@ -1,0 +1,77 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+
+      
+          <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+              </ion-buttons>
+     
+    <ion-title class="titu">Denúncia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+<div>
+
+    
+        
+       
+        <ion-label>
+            <ion-grid>
+              <ion-row aling-intems-center>
+                <ion-col >
+                  <ion-button class="but" color="success" (click)="foto('picture')">
+                    <ion-icon slot="icon-only" name="camera"></ion-icon>
+                  </ion-button>    
+                </ion-col>
+                <ion-col offset-4>
+                  
+                    <ion-button class="but" color="success" (click)="foto('gallery')">
+                      <ion-icon name="add-circle"></ion-icon>Adicionar
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            </ion-label> 
+       
+      <br>
+
+  <ion-item class="form" >
+    <ion-label position="floating">Descrição: </ion-label>
+    <ion-input [(ngModel)]="descricao" type="text"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item class="form" >
+      <ion-label position="floating">Endereço: </ion-label>
+      <ion-input [(ngModel)]="endereco" type="text"></ion-input>
+    </ion-item>
+  <br>
+ 
+</div>
+
+
+
+
+<br>
+
+        <img src="{{imgFoto}}"/>
+   
+
+
+
+
+
+
+
+
+<ion-button color="success" class="fim" mode="ios" (click)="enviar()">
+    <ion-icon name="checkmark-circle"></ion-icon>ENVIAR
+
+</ion-button>
+</ion-content>
+
+
+
+
